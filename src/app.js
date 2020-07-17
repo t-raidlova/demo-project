@@ -1,13 +1,20 @@
-// function addLi() {
-//   const things = ["tacos", "lol", "blah"];
-//   let items = "";
+const themeMap = {
+	dark: 'light',
+	light: 'dark',
+};
 
-//   for (let i = 0; i < things.length; i++) {
-//     debugger;
-//     items = items + `<li>${things[i]}</li>`;
-//   }
-//   const container = document.getElementById("container");
-//   container.innerHTML = `<ul>${items}</ul>`;
-// }
+const theme =
+	localStorage.getItem('theme') ||
+	((tmp = Object.keys(themeMap)[0]), localStorage.setItem('theme', tmp), tmp);
+const bodyClass = document.body.classList;
+bodyClass.add(theme);
 
-// addLi();
+function toggleTheme() {
+	const current = localStorage.getItem('theme');
+	const next = themeMap[current];
+
+	bodyClass.replace(current, next);
+	localStorage.setItem('theme', next);
+}
+
+document.getElementById('themeButton').onclick = toggleTheme;
