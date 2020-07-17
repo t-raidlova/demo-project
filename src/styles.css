@@ -5,7 +5,7 @@
 	--text-secondary: #ececec;
 	--bg-primary: #23232e;
 	--bg-secondary: #141418;
-	--transition-speed: 600ms;
+	--transition-speed: 500ms;
 }
 
 body {
@@ -34,6 +34,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background: var(--bg-primary);
 }
 
 .navbar {
@@ -56,10 +57,6 @@ main {
 	width: 100%;
 }
 
-.nav-item:last-child {
-	margin-top: auto;
-}
-
 .nav-link {
 	display: flex;
 	align-items: center;
@@ -70,10 +67,18 @@ main {
 	transition: var(--transition-speed);
 }
 
-.nav-link:hover {
+#themeButton {
+	color: var(--text-secondary);
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
+}
+
+.nav-link:hover,
+#themeButton:hover {
 	filter: grayscale(0%) opacity(1);
 	background: var(--bg-secondary);
 	color: var(--text-secondary);
+	cursor: pointer;
 }
 
 .link-text {
@@ -107,7 +112,7 @@ main {
 	text-align: center;
 	color: var(--text-secondary);
 	background: var(--bg-secondary);
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	letter-spacing: 0.3ch;
 	width: 100%;
 }
@@ -192,25 +197,18 @@ main {
 	--bg-secondary: #e4e4e4;
 }
 
-.solar {
-	--text-primary: #576e75;
-	--text-secondary: #35535c;
-	--bg-primary: #fdf6e3;
-	--bg-secondary: #f5e5b8;
-}
-
 .theme-icon {
 	display: none;
 }
 
 .dark #darkIcon,
-.light #lightIcon,
-.solar #solarIcon {
+.light #lightIcon {
 	display: block;
 	height: 2rem;
 	position: absolute;
 	top: 2rem;
 	right: 3rem;
+	color: var(--text-secondary);
 }
 
 #Layer_1 {
