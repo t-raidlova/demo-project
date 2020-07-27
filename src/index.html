@@ -3,15 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
-		<title>Document</title>
+		<link rel="stylesheet" href="./styles/styles.css" />
+		<title>SVG demos</title>
 		<script defer src="app.js"></script>
 		<link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="icon"
+			href="../assets/favicon.ico"
+			size="32x32"
+			type="image/png"
+		/>
 	</head>
 	<body>
+		<main></main>
+		<!-- Theme Switch -->
 		<div id="themeButton">
 			<svg
 				class="theme-icon"
@@ -62,18 +70,17 @@
 			</svg>
 		</div>
 
+		<!-- Navigation -->
 		<nav class="navbar">
 			<ul class="navbar-nav">
 				<li class="logo">
-					<a href="#" class="nav-link">
+					<a href="index.html" class="nav-link">
 						<span class="link-text logo-text">SVG demos</span>
 						<svg
 							aria-hidden="true"
 							focusable="false"
 							data-prefix="fad"
 							data-icon="angle-double-right"
-							role="img"
-							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 448 512"
 							class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
 						>
@@ -94,7 +101,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="note.html" class="nav-link">
 						<svg
 							aria-hidden="true"
 							focusable="false"
@@ -118,12 +125,12 @@
 								></path>
 							</g>
 						</svg>
-						<span class="link-text">SVG 1</span>
+						<span class="link-text">Line</span>
 					</a>
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="index.html" class="nav-link">
 						<svg
 							aria-hidden="true"
 							focusable="false"
@@ -145,12 +152,12 @@
 								></path>
 							</g>
 						</svg>
-						<span class="link-text">SVG 2</span>
+						<span class="link-text">Isometric</span>
 					</a>
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="wave.html" class="nav-link">
 						<svg
 							aria-hidden="true"
 							focusable="false"
@@ -174,7 +181,7 @@
 								></path>
 							</g>
 						</svg>
-						<span class="link-text">SVG 3</span>
+						<span class="link-text">Wave</span>
 					</a>
 				</li>
 
@@ -208,6 +215,8 @@
 				</li>
 			</ul>
 		</nav>
+
+		<!-- SVG -->
 		<main>
 			<!-- <svg width="500" height="500" viewBox="-300 -200 1000 1000">
       <g class="kvetina-1">

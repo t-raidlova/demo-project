@@ -6,25 +6,24 @@
 	--bg-primary: #23232e;
 	--bg-secondary: #141418;
 	--transition-speed: 500ms;
+	--purple: #6649b8;
+
+	--primary: hsla(259, 72%, 52%, 0.7);
+	--secondary: hsla(259, 72%, 52%, 0.6);
 }
 
 body {
-	color: black;
-	background-color: white;
 	margin: 0;
 	padding: 0;
-}
-
-body::-webkit-scrollbar {
-	width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-	background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-	background: #6649b8;
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--purple);
+	}
 }
 
 main {
@@ -41,16 +40,15 @@ main {
 	position: fixed;
 	background-color: var(--bg-primary);
 	transition: width 600ms ease;
-}
-
-.navbar-nav {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
+	&-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
 }
 
 .nav-item {
@@ -65,6 +63,12 @@ main {
 	text-decoration: none;
 	filter: grayscale(100%) opacity(0.7);
 	transition: var(--transition-speed);
+
+	svg {
+		width: 2rem;
+		min-width: 2rem;
+		margin: 0 1.5rem;
+	}
 }
 
 #themeButton {
@@ -86,18 +90,12 @@ main {
 	margin-left: 1rem;
 }
 
-.nav-link svg {
-	width: 2rem;
-	min-width: 2rem;
-	margin: 0 1.5rem;
-}
-
 .fa-primary {
-	color: #ff7eee;
+	color: #d67eff;
 }
 
 .fa-secondary {
-	color: #df49a6;
+	color: #c149df;
 }
 
 .fa-primary,
@@ -115,18 +113,16 @@ main {
 	font-size: 1.2rem;
 	letter-spacing: 0.3ch;
 	width: 100%;
-}
-
-.logo svg {
-	transform: rotate(0deg);
-	transition: var(--transition-speed);
-}
-
-.logo-text {
-	display: inline;
-	position: absolute;
-	left: -999px;
-	transition: var(--transition-speed);
+	svg {
+		transform: rotate(0deg);
+		transition: var(--transition-speed);
+	}
+	&-text {
+		display: inline;
+		position: absolute;
+		left: -999px;
+		transition: var(--transition-speed);
+	}
 }
 
 .navbar:hover .logo svg {
@@ -253,3 +249,6 @@ svg #logo {
 .cls-6 {
 	fill: #a8a8a8;
 }
+
+@import 'note';
+@import 'wave';
