@@ -1,0 +1,35 @@
+.browser {
+	width: 300px;
+	&-logo {
+		animation: animateLogo 1.5s infinite alternate ease-in-out;
+	}
+	.cls-1 {
+		fill: #3d265f;
+	}
+	.cls-2 {
+		fill: #6d43a8;
+	}
+	.cls-3 {
+		fill: #442a6a;
+	}
+	.cls-4 {
+		fill: #d2c9de;
+	}
+	.cls-5 {
+		fill: #e2e2e2;
+	}
+	.cls-6 {
+		fill: #a8a8a8;
+	}
+}
+
+@keyframes animateLogo {
+	from {
+		transform: translateX(0) translateY(0);
+		opacity: 0.1;
+	}
+	to {
+		transform: translateX(25px) translateY(-23px);
+		opacity: 0.8;
+	}
+}

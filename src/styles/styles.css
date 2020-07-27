@@ -14,6 +14,8 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -30,7 +32,6 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,6 +47,7 @@ main {
 
 .navbar {
   position: fixed;
+  z-index: 50;
   background-color: var(--bg-primary);
   -webkit-transition: width 600ms ease;
   transition: width 600ms ease;
@@ -237,65 +239,6 @@ main {
   color: var(--text-secondary);
 }
 
-#Layer_1 {
-  width: 300px;
-}
-
-svg #logo {
-  -webkit-animation: animateLogo 1.5s infinite alternate ease-in-out;
-          animation: animateLogo 1.5s infinite alternate ease-in-out;
-}
-
-@-webkit-keyframes animateLogo {
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-            transform: translateX(0) translateY(0);
-    opacity: 0.1;
-  }
-  to {
-    -webkit-transform: translateX(25px) translateY(-23px);
-            transform: translateX(25px) translateY(-23px);
-    opacity: 0.8;
-  }
-}
-
-@keyframes animateLogo {
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-            transform: translateX(0) translateY(0);
-    opacity: 0.1;
-  }
-  to {
-    -webkit-transform: translateX(25px) translateY(-23px);
-            transform: translateX(25px) translateY(-23px);
-    opacity: 0.8;
-  }
-}
-
-.cls-1 {
-  fill: #3d265f;
-}
-
-.cls-2 {
-  fill: #6d43a8;
-}
-
-.cls-3 {
-  fill: #442a6a;
-}
-
-.cls-4 {
-  fill: #d2c9de;
-}
-
-.cls-5 {
-  fill: #e2e2e2;
-}
-
-.cls-6 {
-  fill: #a8a8a8;
-}
-
 #note {
   width: 250px;
 }
@@ -337,9 +280,10 @@ svg #logo {
 }
 
 .wave {
-  height: 70vh;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  height: 100%;
+  position: fixed;
+  -webkit-transform: rotate(180deg) translateY(-5rem);
+          transform: rotate(180deg) translateY(-5rem);
 }
 
 .wave .st0 {
@@ -378,7 +322,7 @@ svg #logo {
   }
 }
 
-.w3 {
+.wave .w3 {
   -webkit-animation: anim3 20s infinite forwards;
           animation: anim3 20s infinite forwards;
 }
@@ -407,7 +351,7 @@ svg #logo {
   }
 }
 
-.w2 {
+.wave .w2 {
   -webkit-animation: anim2 20s infinite forwards;
           animation: anim2 20s infinite forwards;
 }
@@ -433,6 +377,65 @@ svg #logo {
   }
   100% {
     d: path("M0.5-0.5h1800v400c0,0-724.7-154.9-1084,0c-399,172-716,33-716,33V-0.5z");
+  }
+}
+
+.browser {
+  width: 300px;
+}
+
+.browser-logo {
+  -webkit-animation: animateLogo 1.5s infinite alternate ease-in-out;
+          animation: animateLogo 1.5s infinite alternate ease-in-out;
+}
+
+.browser .cls-1 {
+  fill: #3d265f;
+}
+
+.browser .cls-2 {
+  fill: #6d43a8;
+}
+
+.browser .cls-3 {
+  fill: #442a6a;
+}
+
+.browser .cls-4 {
+  fill: #d2c9de;
+}
+
+.browser .cls-5 {
+  fill: #e2e2e2;
+}
+
+.browser .cls-6 {
+  fill: #a8a8a8;
+}
+
+@-webkit-keyframes animateLogo {
+  from {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    opacity: 0.1;
+  }
+  to {
+    -webkit-transform: translateX(25px) translateY(-23px);
+            transform: translateX(25px) translateY(-23px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes animateLogo {
+  from {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    opacity: 0.1;
+  }
+  to {
+    -webkit-transform: translateX(25px) translateY(-23px);
+            transform: translateX(25px) translateY(-23px);
+    opacity: 0.8;
   }
 }
 /*# sourceMappingURL=styles.css.map */
