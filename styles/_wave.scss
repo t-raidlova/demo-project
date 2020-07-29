@@ -1,4 +1,4 @@
-.wave {
+#wave {
 	height: 100%;
 	position: fixed;
 	transform: rotate(180deg) translateY(-5rem);
@@ -8,9 +8,8 @@
 		stroke: #1a001a00;
 		stroke-width: 0;
 	}
-
 	.w4 {
-		animation: anim4 20s infinite forwards;
+		animation: anim4 15s infinite forwards;
 	}
 	@keyframes anim4 {
 		0% {
@@ -31,7 +30,7 @@
 	}
 
 	.w3 {
-		animation: anim3 20s infinite forwards;
+		animation: anim3 15s infinite forwards;
 	}
 	@keyframes anim3 {
 		0% {
@@ -52,7 +51,7 @@
 	}
 
 	.w2 {
-		animation: anim2 20s infinite forwards;
+		animation: anim2 15s infinite forwards;
 	}
 	@keyframes anim2 {
 		0% {

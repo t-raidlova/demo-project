@@ -1,3 +1,5 @@
+//theme
+
 const themeMap = {
 	dark: 'light',
 	light: 'dark',
@@ -18,3 +20,10 @@ function toggleTheme() {
 }
 
 document.getElementById('themeButton').onclick = toggleTheme;
+
+// text SVG
+const text = document.querySelectorAll('#text path');
+
+for (let i = 0; i < text.length; i++) {
+	console.log(`letter ${i} is ${text[i].getTotalLength()}`);
+}

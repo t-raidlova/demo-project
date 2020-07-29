@@ -249,7 +249,7 @@ main {
   transition: 1.1s ease-in-out;
 }
 
-.note-path {
+#note .note-path {
   fill: var(--bg-primary);
   stroke: var(--primary);
   stroke-width: 4;
@@ -279,23 +279,23 @@ main {
   }
 }
 
-.wave {
+#wave {
   height: 100%;
   position: fixed;
   -webkit-transform: rotate(180deg) translateY(-5rem);
           transform: rotate(180deg) translateY(-5rem);
 }
 
-.wave .st0 {
+#wave .st0 {
   opacity: 0.4;
   fill: url(#grad);
   stroke: #1a001a00;
   stroke-width: 0;
 }
 
-.wave .w4 {
-  -webkit-animation: anim4 20s infinite forwards;
-          animation: anim4 20s infinite forwards;
+#wave .w4 {
+  -webkit-animation: anim4 15s infinite forwards;
+          animation: anim4 15s infinite forwards;
 }
 
 @-webkit-keyframes anim4 {
@@ -322,9 +322,9 @@ main {
   }
 }
 
-.wave .w3 {
-  -webkit-animation: anim3 20s infinite forwards;
-          animation: anim3 20s infinite forwards;
+#wave .w3 {
+  -webkit-animation: anim3 15s infinite forwards;
+          animation: anim3 15s infinite forwards;
 }
 
 @-webkit-keyframes anim3 {
@@ -351,9 +351,9 @@ main {
   }
 }
 
-.wave .w2 {
-  -webkit-animation: anim2 20s infinite forwards;
-          animation: anim2 20s infinite forwards;
+#wave .w2 {
+  -webkit-animation: anim2 15s infinite forwards;
+          animation: anim2 15s infinite forwards;
 }
 
 @-webkit-keyframes anim2 {
@@ -380,36 +380,36 @@ main {
   }
 }
 
-.browser {
+#browser {
   width: 300px;
 }
 
-.browser-logo {
+#browser-logo {
   -webkit-animation: animateLogo 1.5s infinite alternate ease-in-out;
           animation: animateLogo 1.5s infinite alternate ease-in-out;
 }
 
-.browser .cls-1 {
+#browser .cls-1 {
   fill: #3d265f;
 }
 
-.browser .cls-2 {
+#browser .cls-2 {
   fill: #6d43a8;
 }
 
-.browser .cls-3 {
+#browser .cls-3 {
   fill: #442a6a;
 }
 
-.browser .cls-4 {
+#browser .cls-4 {
   fill: #d2c9de;
 }
 
-.browser .cls-5 {
+#browser .cls-5 {
   fill: #e2e2e2;
 }
 
-.browser .cls-6 {
+#browser .cls-6 {
   fill: #a8a8a8;
 }
 
@@ -436,6 +436,83 @@ main {
     -webkit-transform: translateX(25px) translateY(-23px);
             transform: translateX(25px) translateY(-23px);
     opacity: 0.8;
+  }
+}
+
+#text {
+  -webkit-animation: fill 1.5s ease forwards 2.5s;
+          animation: fill 1.5s ease forwards 2.5s;
+}
+
+#text path:nth-child(1) {
+  stroke-dasharray: 498;
+  stroke-dashoffset: 498;
+  -webkit-animation: text-anim 3s ease forwards;
+          animation: text-anim 3s ease forwards;
+}
+
+#text path:nth-child(2) {
+  stroke-dasharray: 437;
+  stroke-dashoffset: 437;
+  -webkit-animation: text-anim 3s ease forwards 0.3s;
+          animation: text-anim 3s ease forwards 0.3s;
+}
+
+#text path:nth-child(3) {
+  stroke-dasharray: 409;
+  stroke-dashoffset: 409;
+  -webkit-animation: text-anim 3s ease forwards 0.6s;
+          animation: text-anim 3s ease forwards 0.6s;
+}
+
+#text path:nth-child(4) {
+  stroke-dasharray: 226;
+  stroke-dashoffset: 226;
+  -webkit-animation: text-anim 3s ease forwards 0.9s;
+          animation: text-anim 3s ease forwards 0.9s;
+}
+
+#text path:nth-child(5) {
+  stroke-dasharray: 569;
+  stroke-dashoffset: 569;
+  -webkit-animation: text-anim 3s ease forwards 1.2s;
+          animation: text-anim 3s ease forwards 1.2s;
+}
+
+#text path:nth-child(6) {
+  stroke-dasharray: 395.8;
+  stroke-dashoffset: 395.8;
+  -webkit-animation: text-anim 3s ease forwards 1.5s;
+          animation: text-anim 3s ease forwards 1.5s;
+}
+
+@-webkit-keyframes text-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes text-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--text-primary);
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--text-primary);
   }
 }
 /*# sourceMappingURL=styles.css.map */

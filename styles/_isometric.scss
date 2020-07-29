@@ -1,4 +1,4 @@
-.browser {
+#browser {
 	width: 300px;
 	&-logo {
 		animation: animateLogo 1.5s infinite alternate ease-in-out;
@@ -21,15 +21,14 @@
 	.cls-6 {
 		fill: #a8a8a8;
 	}
-}
-
-@keyframes animateLogo {
-	from {
-		transform: translateX(0) translateY(0);
-		opacity: 0.1;
-	}
-	to {
-		transform: translateX(25px) translateY(-23px);
-		opacity: 0.8;
+	@keyframes animateLogo {
+		from {
+			transform: translateX(0) translateY(0);
+			opacity: 0.1;
+		}
+		to {
+			transform: translateX(25px) translateY(-23px);
+			opacity: 0.8;
+		}
 	}
 }
