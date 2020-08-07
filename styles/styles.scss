@@ -110,7 +110,7 @@ main {
 	text-transform: uppercase;
 	margin-bottom: 1rem;
 	text-align: center;
-	color: var(--text-secondary);b
+	color: var(--text-secondary);
 	background: var(--bg-secondary);
 	font-size: 1.2rem;
 	letter-spacing: 0.3ch;
@@ -213,3 +213,4 @@ main {
 @import 'wave';
 @import 'isometric';
 @import 'text';
+@import 'masking';

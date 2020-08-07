@@ -515,4 +515,40 @@ main {
     fill: var(--text-primary);
   }
 }
+
+.masking-container {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+
+.masking-container #masking {
+  height: 100%;
+  width: 100%;
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: 1s font-size;
+  transition: 1s font-size;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .masking-container #masking {
+    font-size: 4rem;
+  }
+}
+
+.masking-container #masking rect {
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+}
+
+.masking-container video {
+  height: 90%;
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */
