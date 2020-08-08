@@ -32,7 +32,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	background: var(--bg-primary);
 }
 
@@ -214,3 +214,4 @@ main {
 @import 'isometric';
 @import 'text';
 @import 'masking';
+@import 'path';

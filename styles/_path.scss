@@ -1,0 +1,55 @@
+.path-container {
+	margin-top: 5rem;
+	position: relative;
+	width: 100%;
+	height: 200vh;
+
+	section {
+		width: 100%;
+		height: 75vh;
+		display: grid;
+		place-content: center;
+		z-index: 2;
+		position: relative;
+	}
+
+	.svgPath {
+		width: 100%;
+		height: 80vh;
+		position: fixed;
+		top: 5rem;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 1;
+	}
+
+	.anim {
+		font-size: 3rem;
+		color: var(--text-primary);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 15rem;
+	}
+	.text {
+		text-transform: uppercase;
+		fill: var(--bg-secondary);
+		font-weight: bold;
+	}
+
+	.animate {
+		animation: reveal 1s forwards;
+	}
+
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			transform: translateX(-180px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}

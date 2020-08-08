@@ -1,13 +1,13 @@
 #note {
 	width: 250px;
-	&:hover .note-path {
-		fill: var(--secondary);
-		transition: 1.1s ease-in-out;
-	}
+	// &:hover .note-path {
+	// 	fill: var(--text-secondary);
+	// 	transition: 1.1s ease-in-out;
+	// }
 	.note-path {
 		fill: var(--bg-primary);
-		stroke: var(--primary);
-		stroke-width: 4;
+		stroke: var(--text-primary);
+		stroke-width: 8;
 		stroke-linejoin: bevel;
 		stroke-miterlimit: 10;
 		stroke-dasharray: 2200;

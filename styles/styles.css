@@ -41,7 +41,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: var(--bg-primary);
 }
 
@@ -243,16 +243,10 @@ main {
   width: 250px;
 }
 
-#note:hover .note-path {
-  fill: var(--secondary);
-  -webkit-transition: 1.1s ease-in-out;
-  transition: 1.1s ease-in-out;
-}
-
 #note .note-path {
   fill: var(--bg-primary);
-  stroke: var(--primary);
-  stroke-width: 4;
+  stroke: var(--text-primary);
+  stroke-width: 8;
   stroke-linejoin: bevel;
   stroke-miterlimit: 10;
   stroke-dasharray: 2200;
@@ -550,5 +544,88 @@ main {
 .masking-container video {
   height: 90%;
   width: 100%;
+}
+
+.path-container {
+  margin-top: 5rem;
+  position: relative;
+  width: 100%;
+  height: 200vh;
+}
+
+.path-container section {
+  width: 100%;
+  height: 75vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.path-container .svgPath {
+  width: 100%;
+  height: 80vh;
+  position: fixed;
+  top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.path-container .anim {
+  font-size: 3rem;
+  color: var(--text-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 15rem;
+}
+
+.path-container .text {
+  text-transform: uppercase;
+  fill: var(--bg-secondary);
+  font-weight: bold;
+}
+
+.path-container .animate {
+  -webkit-animation: reveal 1s forwards;
+          animation: reveal 1s forwards;
+}
+
+@-webkit-keyframes reveal {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
