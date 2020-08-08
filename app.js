@@ -27,3 +27,33 @@ document.getElementById('themeButton').onclick = toggleTheme;
 // for (let i = 0; i < text.length; i++) {
 // 	console.log(`letter ${i} is ${text[i].getTotalLength()}`);
 // }
+
+// path SVG
+const textPath = document.querySelector('#text-path');
+
+function updateTextPathOffset(offset) {
+	textPath.setAttribute('startOffset', offset);
+}
+
+function onScroll() {
+	requestAnimationFrame(function () {
+		updateTextPathOffset(window.scrollY * 1.5);
+	});
+}
+window.addEventListener('scroll', onScroll);
+
+const titles = document.querySelectorAll('.anim');
+
+observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting == true) {
+			entry.target.classList.add('animate');
+		} else {
+			entry.target.classList.remove('animate');
+		}
+	});
+});
+
+titles.forEach((title) => {
+	observer.observe(title);
+});
